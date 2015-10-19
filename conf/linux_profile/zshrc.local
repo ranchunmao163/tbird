@@ -20,3 +20,10 @@ export PATH="${PATH}:${HADOOP_HOME}/bin"
 
 export HIVE_HOME="/usr/local/hive"
 export PATH="${PATH}:${HIVE_HOME}/bin"
+
+export HCAT_HOME="${HIVE_HOME}/hcatalog"
+export PATH="${PATH}:${HCAT_HOME}/bin"
+
+# Hive fix
+# http://stackoverflow.com/questions/28997441/hive-startup-error-terminal-initialization-failed-falling-back-to-unsupporte
+export HADOOP_USER_CLASSPATH_FIRST=true
