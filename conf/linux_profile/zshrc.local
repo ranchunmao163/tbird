@@ -1,0 +1,22 @@
+set -o vi
+
+# tmux
+alias tnew="tmux new -s"
+alias t="tmux a -t"
+alias tls="tmux ls"
+
+# git
+alias gs="git remote show origin"
+
+export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
+
+alias readlink="greadlink"
+
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
+export PATH="${PATH}:${JAVA_HOME}/bin"
+
+export HADOOP_HOME="/usr/local/hadoop"
+export PATH="${PATH}:${HADOOP_HOME}/bin"
+
+export HIVE_HOME="/usr/local/hive"
+export PATH="${PATH}:${HIVE_HOME}/bin"

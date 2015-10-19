@@ -1,0 +1,39 @@
+#!/bin/bash
+
+readonly __project_dir="/Users/${USER}/IdeaProjects/datamart_offline_models/collections"
+
+if [[ -z "${FAST}" ]]; then
+  export FAST=0
+fi
+
+set -e
+set -u
+
+cd "${__project_dir}"
+
+if [[ "${FAST}" -eq 1 ]]; then
+  mvn -o clean package
+else
+  mvn clean package
+fi
+
+readonly __unzip="target/unzip"
+
+if [[ -d  "${__unzip}" ]]; then
+  rm -rf "${__unzip}"
+fi
+
+mkdir -p "${__unzip}"
+
+tar -zxvf target/collections*.tar.gz -C target/unzip
+
+rsync -Pravdtze 'ssh -p 3335' --delete --force target/unzip/col* localhost:~/datamart/deploy
+
+readonly __log=/x/home/${USER}/datamart/deploy/collections-1.0.0-SNAPSHOT/bin/log.txt
+
+ssh -p 3335 localhost "nohup /x/home/${USER}/datamart/deploy/collections-1.0.0-SNAPSHOT/bin/run -p 20150820 > ${__log} 2>&1 &"
+
+echo "execute the following command to refer the log details:"
+echo "tail -f ${__log}"
+
+cd -
