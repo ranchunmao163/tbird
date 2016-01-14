@@ -1,5 +1,24 @@
 set -o vi
 
+# alias
+alias clr='clear'
+alias ll='ls -l'
+alias la='ls -a'
+alias vi='vim'
+alias javac="javac -J-Dfile.encoding=utf8"
+alias grep="grep --color=auto"
+# alias -s html=mate
+# alias -s rb=mate
+alias -s py=vi
+alias -s js=vi
+alias -s c=vi
+alias -s java=vi
+alias -s txt=vi
+alias -s gz='tar -zxvf'
+alias -s tgz='tar -zxvf'
+alias -s zip='unzip'
+alias -s bz2='tar -zjvf'
+
 # tmux
 alias tnew="tmux new -s"
 alias t="tmux a -t"
@@ -12,7 +31,7 @@ export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=128m"
 
 alias readlink="greadlink"
 
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_79.jdk/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
 export PATH="${PATH}:${JAVA_HOME}/bin"
 
 export HADOOP_HOME="/usr/local/hadoop"
