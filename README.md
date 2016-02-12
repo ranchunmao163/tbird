@@ -12,11 +12,9 @@ unbuntu linux:
   sudo apt-get install zsh
 mac
   sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-```
+  chsh -s /bin/zsh
 
-#### configure after the installation
-```
-  change shell setting:
+change shell setting:
   chsh -s /bin/zsh
 ```
 
@@ -28,14 +26,14 @@ set -o vi
 # personal hobby
 export TBIRD_HOME=${HOME}/IdeaProjects/tbird
 source ${TBIRD_HOME}/conf/unix/zshrc.local
-
 # edit ~/.zshrc file to add more plugins for the plugins entry
 # execute "ll ~/.oh-my-zsh/plugins" to get the full plugin list
+plugins=(git autojump tmux)
 ```
 
 #### reference
   - github: https://github.com/robbyrussell/oh-my-zsh
-
+  - plugins wiki page: https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
 
 # hive
 
