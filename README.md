@@ -34,7 +34,7 @@ source ${TBIRD_HOME}/conf/unix/zshrc.local
 ```
 
 #### reference
-..* github: https://github.com/robbyrussell/oh-my-zsh
+  - github: https://github.com/robbyrussell/oh-my-zsh
 
 
 # hive
