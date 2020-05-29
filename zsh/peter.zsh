@@ -15,3 +15,14 @@ export PATH="/usr/local/opt/gettext/bin:$PATH"
 # Go
 export GOPATH="${HOME}/go"
 export PATH="${PATH}:${GOPATH}/bin"
+
+# Ant
+export ANT_HOME="${HOME}/bin/ant/latest"
+export PATH="${PATH}:${ANT_HOME}/bin"
+
+# https://computingforgeeks.com/how-to-configure-zsh-syntax-highlighting-on-linux-macos/
+# mkdir ~/.scripts
+# cd ~/.scripts
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+source ~/.scripts/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+
